@@ -32,6 +32,8 @@ class QuestionsController < ApplicationController
     question.answers.first.creator = current_user
     question.save
 
+    reflection = 
+
     # users get one vote for their own questions by default
     # (so their karma/score improves as they create questions)
     current_user.vote_for(question)

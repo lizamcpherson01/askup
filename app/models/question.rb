@@ -3,6 +3,7 @@ class Question < ActiveRecord::Base
   belongs_to :user
   belongs_to :qset
   has_many :answers, :dependent => :destroy
+  has_many :reflections
   accepts_nested_attributes_for :answers, allow_destroy: true
 
   def belongs_to?(user)
